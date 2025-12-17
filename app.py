@@ -3,10 +3,8 @@ import pickle
 import numpy as np
 
 # Load the trained model
-#with open('model.pkl', 'rb') as file:
+with open('model.pkl', 'rb') as file:
     #model = pickle.load(file)
-model = pickle.load(open("model.pkl", "rb"))
-#scaler = pickle.load(open("scaler.pkl", "rb"))
 
 # App title
 st.title("🩺 Logistic Regression Diabetes Prediction App")
@@ -37,6 +35,7 @@ if st.button("Predict"):
         st.error("The person is **diabetic**")
     else:
         st.success("The person is **not diabetic**")
+
 
 
 
